@@ -1,0 +1,22 @@
+<!-- app/views/movies/new.html.erb -->
+<h1>New Movie</h1>
+<%= form_with(model: @movie, local: true) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :rating %>
+    <%= form.text_field :rating %>
+  </div>
+
+  <div>
+    <%= form.label :release_date %>
+    <%= form.date_field :release_date %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
